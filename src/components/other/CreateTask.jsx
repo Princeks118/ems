@@ -23,11 +23,10 @@ const CreateTask = () => {
     };
 
     try {
-      await axios.post('http://localhost:5000/tasks', newTask);
+      await axios.post('http://localhost:5000/tasks/create', newTask);
 
-      const res = await axios.get('http://localhost:5000/users');
+      const res = await axios.get('http://localhost:5000/users/me');
       setUserData(res.data);
-
       alert("Task added successfully!");
       setTaskTitle('');
       setTaskDescription('');

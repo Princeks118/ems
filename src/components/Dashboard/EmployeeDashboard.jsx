@@ -7,7 +7,7 @@ import { AuthContext } from '../../context/AuthProvider'; // maan ke chal rahe h
 
 const EmployeeDashboard = ({ changeUser }) => {
   const [data, setData] = useState([]);
-  const { user } = useContext(AuthContext); // current logged-in employee
+  const { user } = useContext(AuthContext);
 
   useEffect(() => {
     if (!user || !user.name) return; // agar user info nahi mila to skip
